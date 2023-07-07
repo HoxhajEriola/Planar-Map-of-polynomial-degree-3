@@ -1,0 +1,1 @@
+# Planar-Map-of-polynomial-degree-3
