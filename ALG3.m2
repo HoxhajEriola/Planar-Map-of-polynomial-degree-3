@@ -109,7 +109,7 @@ LNormalize = (B)->(
   
   
   
-  time l:=getSubmatrixOfRank(27,N, Strategy=>StrategyRandom);
+  l:=getSubmatrixOfRank(27,N, Strategy=>StrategyRandom);
   M:=N^(l#0); 
   
   A:=substitute(gens ker M,P9);
