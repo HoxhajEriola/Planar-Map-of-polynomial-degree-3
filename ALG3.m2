@@ -284,8 +284,8 @@ PlanarMap=(B)->(
 --as singularities such that the degree can be factored as 3d(d-1)
 --The first step is finding the parametrization of the Veronese surface
 --where the linear normalization of the curve B lies.
---The next step is to compose the parametrization with a random
---projection to a plane. 
+--The next step is to compose the parametrization with
+--projection to the first three coordinates. 
 
 --OUTPUT: a planar map such that the curve B is ist branching curve.
        
@@ -298,8 +298,7 @@ PlanarMap=(B)->(
        com := gcd(Entr#0#0,Entr#0#1);
        
        ParSimp := apply(Entr#0, i->(quotientRemainder(i,com))#0);
-       RndLstParSimp:=random(ParSimp);
-       ParProj:=take(RndLstParSimp,3);
+       ParProj:= drop(ParSimp,{3,9});
        PlanarMap:=map(P2,RC,ParProj)
        
        )
